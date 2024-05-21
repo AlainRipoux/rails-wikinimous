@@ -1,0 +1,16 @@
+<div class="container">
+ <h1><%= @article.title %></h1>
+ <div class="border-bottom">
+ <%= link_to "Update", edit_article_path(@article), class: "btn btn-info" %>
+ <%= link_to "Delete",
+   article_path(@article),
+   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+   class: "btn btn-danger"
+ %>
+ <p class="alert alert-dark rounded"><%= @article.content %></p>
+ </div>
+
+ <%= link_to "Back to list", articles_path %>
+
+ </div>
+<p></p>
